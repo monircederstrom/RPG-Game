@@ -1,9 +1,9 @@
 type="text/javascript"
-
-var jjhp = 180;
-var jchp = 150;
-var jwhp = 100;
-var dwhp = 120
+var jjhp = 10;
+var jchp = 8;
+var jwhp = 7;
+var dwhp = 6
+var newjjhp = jjhp -2;
 // on.click (links id) function to start the game that encapuslates the entire game
 $(document).ready(function(){
     $(".enemies").hide();
@@ -35,6 +35,22 @@ $("#jj").click(function() {
         $("#button").show();
         $("#jw").hide();
         $("#dw").hide();
+        $("#button").click(function(){
+            $(".jjhp").replaceWith("JJ Watt: " + newjjhp);
+            $(".jchp").replaceWith("Jadeveon Clowney:" + (jchp - 2));
+
+        })
+        $("#button").click(function(){
+            if ($(".jjhp >= 0")) {
+
+
+            $(".jjhp").replaceWith("JJ Watt: " + (newjjhp - 3));
+            $(".jchp").replaceWith("Jadeveon Clowney:" + (jchp - 2));
+            }
+            else {
+                $(".outcome").append("You Win! JJ Watt wins at EVERYTHINGQ!");
+            };
+        });
         
     });
 
