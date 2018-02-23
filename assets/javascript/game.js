@@ -35,15 +35,7 @@ $("#jj").click(function() {
         $("#button").show();
         $("#jw").hide();
         $("#dw").hide();
-        // on button click function to decrease hp until <= 0
-        $(".button").click(functin(){
-
-    // each attack re writes the hp to the dom
-
         
-        // each attack re writes the outcome div dom
-
-});
     });
 
     $("#jw").click(function(){
