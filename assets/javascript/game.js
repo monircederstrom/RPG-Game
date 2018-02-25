@@ -6,8 +6,6 @@ var jwhp = 120;
 var dwhp = 130;
 var clicks = 0;
 
-
-
 // on.click (links id) function to start the game that encapuslates the entire game
 $(document).ready(function(){
     $(".enemies").hide();
@@ -15,7 +13,7 @@ $(document).ready(function(){
     $(".fight").hide();
     $(".outcome").hide();
     $(".defender").hide();
-
+    $("#reset").hide();
 
     $(".jjhp").append("JJ Watt: " + jjhp);
     $(".jchp").append("Jadeveon Clowney: " + jchp);  
@@ -51,7 +49,11 @@ $(document).ready(function(){
                 }
             else {
                 $(".outcome").show()
-                $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
+                $(".outcome").text("Outcome: JJ WATT WINS AGAIN!");
+                $("#reset").show();
+              $("#reset").click(function() {
+                  location.reload(true);
+              });
             }
         });
         });
@@ -79,6 +81,10 @@ $(document).ready(function(){
             else {
                 $(".outcome").show()
                 $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
+                $("#reset").show();
+              $("#reset").click(function() {
+                  location.reload(true);
+              });
             }
 
         });
@@ -105,6 +111,10 @@ $(document).ready(function(){
             else {
                 $(".outcome").show()
                 $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
+                $("#reset").show();
+              $("#reset").click(function() {
+                  location.reload(true);
+              });
             }
 
         });
@@ -142,6 +152,10 @@ $(document).ready(function(){
             else {
                 $(".outcome").show()
                 $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
+                $("#reset").show();
+              $("#reset").click(function() {
+                  location.reload(true);
+              });
             }
         });
 
@@ -169,6 +183,10 @@ $(document).ready(function(){
             else {
                 $(".outcome").show()
                 $(".outcome").text("He's not Clowning around! Jadeveon WINS!")
+                $("#reset").show();
+              $("#reset").click(function() {
+                  location.reload(true);
+              });
             }
         });
         });
@@ -194,6 +212,10 @@ $(document).ready(function(){
             else {
                 $(".outcome").show()
                 $(".outcome").text("Outcome: He's not Clowning around! Jadeveon WINS!")
+                $("#reset").show();
+                $("#reset").click(function() {
+                    location.reload(true);
+                });
             }
         });
         });
@@ -228,6 +250,10 @@ $("#jw").click(function() {
             else {
                 $(".outcome").show()
                 $(".outcome").text("Outcome: He's not Clowning around! Jadeveon WINS!")
+                $("#reset").show();
+              $("#reset").click(function() {
+                  location.reload(true);
+              });
             }
         });
     });
@@ -254,6 +280,10 @@ $("#jw").click(function() {
         else {
             $(".outcome").show()
             $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
+            $("#reset").show();
+              $("#reset").click(function() {
+                  location.reload(true);
+              });
         }
 
     });
@@ -279,6 +309,10 @@ $("#jw").click(function() {
             else {
                 $(".outcome").show()
                 $(".outcome").text("Outcome: The rookie amazes us again! Watson's the WINNER!")
+                $("#reset").show();
+              $("#reset").click(function() {
+                  location.reload(true);
+              });
             }
         });
     });
@@ -314,6 +348,10 @@ $("#dw").click(function() {
         else {
             $(".outcome").show()
             $(".outcome").text("Outcome: He's not Clowning around! Jadeveon WINS!")
+            $("#reset").show();
+              $("#reset").click(function() {
+                  location.reload(true);
+              });
         }
         });
     });
@@ -339,6 +377,10 @@ $("#dw").click(function() {
         else {
             $(".outcome").show()
             $(".outcome").text("Outcome: The rookie amazes us again! Watson's the WINNER!")
+            $("#reset").show();
+              $("#reset").click(function() {
+                  location.reload(true);
+              });
         }
     });
     });
@@ -363,6 +405,10 @@ $("#dw").click(function() {
              else {
                  $(".outcome").show()
                  $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
+                 $("#reset").show();
+              $("#reset").click(function() {
+                  location.reload(true);
+              });
              }
  
          });

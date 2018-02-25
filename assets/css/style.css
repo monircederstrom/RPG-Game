@@ -14,7 +14,11 @@
 	margin-left: 5%;
 	clear: left;
 }
-
+#reset {
+	background-color: navy;
+	margin-left: 5%;
+	clear: left;
+}
 .character {
 	padding-left: 5%;
 	
