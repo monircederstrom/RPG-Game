@@ -49,7 +49,29 @@ $(document).ready(function(){
                 }
             else {
                 $(".outcome").show()
-                $(".outcome").text("Outcome: JJ WATT WINS AGAIN!");
+                $(".outcome").text("Outcome: JJ WATT WINS AGAIN! Choose a new character to fight.");
+                $("#jw").show();
+                $("#dw").show();
+                $("#jj").hide();
+                jjhp = 180;
+
+
+                //round two battle
+                $("#jw").click(function() {
+                    $(".jjhp").text("JJ Watt: " + jjhp);
+                    $("#jc").hide();
+                    $("#jj").show();
+                    $(".outcome").text(" ");
+                    $("#jw").prependTo("#defenders");
+                });
+                $("#dw").click(function() {
+                    $(".jjhp").text("JJ Watt: " + jjhp);
+                    $("#jc").hide();
+                    $("#jj").show();
+                    $(".outcome").text(" ");
+                    $("#dw").prependTo("#defenders");
+                });
+                //reset button
                 $("#reset").show();
               $("#reset").click(function() {
                   location.reload(true);
@@ -80,7 +102,28 @@ $(document).ready(function(){
                 }
             else {
                 $(".outcome").show()
-                $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
+                $(".outcome").text("Outcome: JJ WATT WINS AGAIN! Choose a new character to fight.")
+                $("#jc").show()
+                $("#dw").show()
+                $("#jj").hide();
+                jjhp = 180;
+                //round two battle
+                $("#jc").click(function() {
+                    $(".jjhp").text("JJ Watt: " + jjhp);
+                    $("#jw").hide();
+                    $("#jj").show();
+                    $(".outcome").text(" ");
+                    $("#jc").prependTo("#defenders");
+                });
+                $("#dw").click(function() {
+                    $(".jjhp").text("JJ Watt: " + jjhp);
+                    $("#jw").hide();
+                    $("#jj").show();
+                    $(".outcome").text(" ");
+                    $("#dw").prependTo("#defenders");
+                });
+
+                //reset button
                 $("#reset").show();
               $("#reset").click(function() {
                   location.reload(true);
@@ -110,7 +153,28 @@ $(document).ready(function(){
                 }
             else {
                 $(".outcome").show()
-                $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
+                $(".outcome").text("Outcome: JJ WATT WINS AGAIN! Choose a new character to fight.");
+                $("#jw").show()
+                $("#jc").show()
+                $("#jj").hide();
+                jjhp = 180;
+                 //round two battle
+                 $("#jc").click(function() {
+                    $(".jjhp").text("JJ Watt: " + jjhp);
+                    $("#dw").hide();
+                    $("#jj").show();
+                    $(".outcome").text(" ");
+                    $("#jc").prependTo("#defenders");
+                });
+                $("#jw").click(function() {
+                    $("#dw").hide();
+                    $("#jj").show();
+                    $(".outcome").text(" ");
+                    $("#jw").prependTo("#defenders");
+                    $(".jjhp").text("JJ Watt: " + jjhp);
+                });
+
+                //reset button
                 $("#reset").show();
               $("#reset").click(function() {
                   location.reload(true);
@@ -151,7 +215,28 @@ $(document).ready(function(){
                 }
             else {
                 $(".outcome").show()
-                $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
+                $(".outcome").text("Outcome: JJ WATT WINS AGAIN! Choose a new character to fight.");
+                $("#jw").show();
+                $("#dw").show();
+                $("#jc").hide();
+                jchp = 150;
+                 //round two battle
+                 $("#jw").click(function() {
+                    $(".jchp").text("Jadeveon Clowney:: " + jchp);
+                    $("#jj").hide();
+                    $("#jc").show();
+                    $(".outcome").text(" ");
+                    $("#jw").prependTo("#defenders");
+                });
+                $("#dw").click(function() {
+                    $(".jchp").text("Jadeveon Clowney:: " + jchp);
+                    $("#jj").hide();
+                    $("#jc").show();
+                    $(".outcome").text(" ");
+                    $("#dw").prependTo("#defenders");
+                });
+
+                //reset button
                 $("#reset").show();
               $("#reset").click(function() {
                   location.reload(true);
@@ -182,7 +267,29 @@ $(document).ready(function(){
             }
             else {
                 $(".outcome").show()
-                $(".outcome").text("He's not Clowning around! Jadeveon WINS!")
+                $(".outcome").text("He's not Clowning around! Jadeveon WINS! Choose a new character to fight.");
+                $("#jj").show();
+                $("#dw").show();
+                $("#jc").hide();
+                jchp = 150;
+                 //round two battle
+                 $("#dw").click(function() {
+                    $(".jchp").text("Jadeveon Clowney:: " + jchp);
+                    $("#jw").hide();
+                    $("#jc").show();
+                    $(".outcome").text(" ");
+                    $("#dw").prependTo("#defenders");
+                });
+                $("#jj").click(function() {
+                    $(".jchp").text("Jadeveon Clowney:: " + jchp);
+                    $("#jw").hide();
+                    $("#jc").show();
+                    $(".outcome").text(" ");
+                    $("#jj").prependTo("#defenders");
+                });
+
+                //reset button
+                $("#reset").show();
                 $("#reset").show();
               $("#reset").click(function() {
                   location.reload(true);
@@ -211,7 +318,28 @@ $(document).ready(function(){
             }
             else {
                 $(".outcome").show()
-                $(".outcome").text("Outcome: He's not Clowning around! Jadeveon WINS!")
+                $(".outcome").text("Outcome: He's not Clowning around! Jadeveon WINS! Choose a new character to fight.");
+                $("#jw").show();
+                $("#jj").show();
+                $("#jc").hide();
+                jchp = 150;
+                 //round two battle
+                 $("#jj").click(function() {
+                    $(".jchp").text("Jadeveon Clowney:: " + jchp);
+                    $("#dw").hide();
+                    $("#jc").show();
+                    $(".outcome").text(" ");
+                    $("#jj").prependTo("#defenders");
+                });
+                $("#jw").click(function() {
+                    $(".jchp").text("Jadeveon Clowney:: " + jchp);
+                    $("#dw").hide();
+                    $("#jc").show();
+                    $(".outcome").text(" ");
+                    $("#jw").prependTo("#defenders");
+                });
+
+                //reset button
                 $("#reset").show();
                 $("#reset").click(function() {
                     location.reload(true);
@@ -249,7 +377,28 @@ $("#jw").click(function() {
             }
             else {
                 $(".outcome").show()
-                $(".outcome").text("Outcome: He's not Clowning around! Jadeveon WINS!")
+                $(".outcome").text("Outcome: He's not Clowning around! Jadeveon WINS! Choose a new character to fight.");
+                $("#jj").show();
+                $("#dw").show();
+                $("#jw").hide();
+                jwhp =120;
+                 //round two battle
+                 $("#jj").click(function() {
+                    $(".jwhp").text("Jon Weeks: " + jwhp);
+                    $("#jc").hide();
+                    $("#jw").show();
+                    $(".outcome").text(" ");
+                    $("#jj").prependTo("#defenders");
+                });
+                $("#dw").click(function() {
+                    $(".jwhp").text("Jon Weeks: " + jwhp);
+                    $("#jc").hide();
+                    $("#jw").show();
+                    $(".outcome").text(" ");
+                    $("#dw").prependTo("#defenders");
+                });
+
+                //reset button
                 $("#reset").show();
               $("#reset").click(function() {
                   location.reload(true);
@@ -279,7 +428,28 @@ $("#jw").click(function() {
             }
         else {
             $(".outcome").show()
-            $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
+            $(".outcome").text("Outcome: JJ WATT WINS AGAIN! Choose a new character to fight.");
+            $("#jc").show();
+            $("#dw").show();
+            $("#jw").hide();
+            jwhp = 120;
+             //round two battle
+             $("#jc").click(function() {
+                $(".jwhp").text("Jon Weeks: " + jwhp);
+                $("#jj").hide();
+                $("#jw").show();
+                $(".outcome").text(" ");
+                $("#jc").prependTo("#defenders");
+            });
+            $("#dw").click(function() {
+                $(".jwhp").text("Jon Weeks: " + jwhp);
+                $("#jj").hide();
+                $("#jw").show();
+                $(".outcome").text(" ");
+                $("#dw").prependTo("#defenders");
+            });
+
+            //reset button
             $("#reset").show();
               $("#reset").click(function() {
                   location.reload(true);
@@ -308,7 +478,28 @@ $("#jw").click(function() {
             }
             else {
                 $(".outcome").show()
-                $(".outcome").text("Outcome: The rookie amazes us again! Watson's the WINNER!")
+                $(".outcome").text("Outcome: The rookie amazes us again! Watson's the WINNER! Choose a new character to fight.");
+                $("#jj").show();
+                $("#jc").show();
+                $("#jw").hide();
+                jwhp = 120;
+                 //round two battle
+                 $("#jj").click(function() {
+                    $(".jwhp").text("Jon Weeks: " + jwhp);
+                    $("#dw").hide();
+                    $("#jw").show();
+                    $(".outcome").text(" ");
+                    $("#jj").prependTo("#defenders");
+                });
+                $("#jc").click(function() {
+                    $(".jwhp").text("Jon Weeks: " + jwhp);
+                    $("#dw").hide();
+                    $("#jw").show();
+                    $(".outcome").text(" ");
+                    $("#jc").prependTo("#defenders");
+                });
+
+                //reset button
                 $("#reset").show();
               $("#reset").click(function() {
                   location.reload(true);
@@ -347,7 +538,28 @@ $("#dw").click(function() {
         }
         else {
             $(".outcome").show()
-            $(".outcome").text("Outcome: He's not Clowning around! Jadeveon WINS!")
+            $(".outcome").text("Outcome: He's not Clowning around! Jadeveon WINS! Choose a new character to fight.");
+            $("#jj").show();
+            $("#jw").show();
+            $("#dw").hide();
+            dwhp = 130;
+             //round two battle
+             $("#jj").click(function() {
+                $(".dwhp").text("Deshaun Watson: " + dwhp);
+                $("#jc").hide();
+                $("#dw").show();
+                $(".outcome").text(" ");
+                $("#jj").prependTo("#defenders");
+            });
+            $("#jw").click(function() {
+                $(".dwhp").text("Deshaun Watson: " + dwhp);
+                $("#jc").hide();
+                $("#dw").show();
+                $(".outcome").text(" ");
+                $("#jw").prependTo("#defenders");
+            });
+
+            //reset button
             $("#reset").show();
               $("#reset").click(function() {
                   location.reload(true);
@@ -376,7 +588,28 @@ $("#dw").click(function() {
         }
         else {
             $(".outcome").show()
-            $(".outcome").text("Outcome: The rookie amazes us again! Watson's the WINNER!")
+            $(".outcome").text("Outcome: The rookie amazes us again! Watson's the WINNER! Choose a new character to fight.");
+            $("#jj").show();
+            $("#jc").show();
+            $("#dw").hide();
+            dwhp =130; 
+            //round two battle
+             $("#jj").click(function() {
+                $(".dwhp").text("Deshaun Watson: " + dwhp);
+                $("#jw").hide();
+                $("#dw").show();
+                $(".outcome").text(" ");
+                $("#jj").prependTo("#defenders");
+            });
+            $("#jc").click(function() {
+                $(".dwhp").text("Deshaun Watson: " + dwhp);
+                $("#jw").hide();
+                $("#dw").show();
+                $(".outcome").text(" ");
+                $("#jc").prependTo("#defenders");
+            });
+
+            //reset button
             $("#reset").show();
               $("#reset").click(function() {
                   location.reload(true);
@@ -404,7 +637,28 @@ $("#dw").click(function() {
                  }
              else {
                  $(".outcome").show()
-                 $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
+                 $(".outcome").text("Outcome: JJ WATT WINS AGAIN! Choose a new character to fight.");
+                 $("#jc").show();
+                 $("#jw").show();
+                 $("#dw").hide();
+                 dwhp =130;
+                 //round two battle
+                  $("#jc").click(function() {
+                    $(".dwhp").text("Deshaun Watson: " + dwhp);
+                    $("#jj").hide();
+                    $("#dw").show();
+                    $(".outcome").text(" ");
+                    $("#jc").prependTo("#defenders");
+                });
+                $("#jw").click(function() {
+                    $(".dwhp").text("Deshaun Watson: " + dwhp);
+                    $("#jj").hide();
+                    $("#dw").show();
+                    $(".outcome").text(" ");
+                    $("#jw").prependTo("#defenders");
+                });
+
+                //reset button
                  $("#reset").show();
               $("#reset").click(function() {
                   location.reload(true);
