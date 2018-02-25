@@ -51,7 +51,7 @@ $(document).ready(function(){
                 }
             else {
                 $(".outcome").show()
-                $(".outcome").text("JJ WATT WINS AGAIN!")
+                $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
             }
         });
         });
@@ -78,7 +78,7 @@ $(document).ready(function(){
                 }
             else {
                 $(".outcome").show()
-                $(".outcome").text("JJ WATT WINS AGAIN!")
+                $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
             }
 
         });
@@ -104,7 +104,7 @@ $(document).ready(function(){
                 }
             else {
                 $(".outcome").show()
-                $(".outcome").text("JJ WATT WINS AGAIN!")
+                $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
             }
 
         });
@@ -141,7 +141,7 @@ $(document).ready(function(){
                 }
             else {
                 $(".outcome").show()
-                $(".outcome").text("JJ WATT WINS AGAIN!")
+                $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
             }
         });
 
@@ -164,7 +164,7 @@ $(document).ready(function(){
                 jchp = jchp - (8 * clicks); 
             
                  $(".jwhp").text("Jon Weeks: " + jwhp);
-                $(".jchp").text("Jadeveon Clowney:" + jchp);
+                $(".jchp").text("Outcome: Jadeveon Clowney:" + jchp);
             }
             else {
                 $(".outcome").show()
@@ -193,7 +193,7 @@ $(document).ready(function(){
             }
             else {
                 $(".outcome").show()
-                $(".outcome").text("He's not Clowning around! Jadeveon WINS!")
+                $(".outcome").text("Outcome: He's not Clowning around! Jadeveon WINS!")
             }
         });
         });
@@ -227,7 +227,7 @@ $("#jw").click(function() {
             }
             else {
                 $(".outcome").show()
-                $(".outcome").text("He's not Clowning around! Jadeveon WINS!")
+                $(".outcome").text("Outcome: He's not Clowning around! Jadeveon WINS!")
             }
         });
     });
@@ -253,7 +253,7 @@ $("#jw").click(function() {
             }
         else {
             $(".outcome").show()
-            $(".outcome").text("JJ WATT WINS AGAIN!")
+            $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
         }
 
     });
@@ -278,7 +278,7 @@ $("#jw").click(function() {
             }
             else {
                 $(".outcome").show()
-                $(".outcome").text("The rookie amazes us again! Watson's the WINNER!")
+                $(".outcome").text("Outcome: The rookie amazes us again! Watson's the WINNER!")
             }
         });
     });
@@ -313,7 +313,7 @@ $("#dw").click(function() {
         }
         else {
             $(".outcome").show()
-            $(".outcome").text("He's not Clowning around! Jadeveon WINS!")
+            $(".outcome").text("Outcome: He's not Clowning around! Jadeveon WINS!")
         }
         });
     });
@@ -338,7 +338,7 @@ $("#dw").click(function() {
         }
         else {
             $(".outcome").show()
-            $(".outcome").text("The rookie amazes us again! Watson's the WINNER!")
+            $(".outcome").text("Outcome: The rookie amazes us again! Watson's the WINNER!")
         }
     });
     });
@@ -362,7 +362,7 @@ $("#dw").click(function() {
                  }
              else {
                  $(".outcome").show()
-                 $(".outcome").text("JJ WATT WINS AGAIN!")
+                 $(".outcome").text("Outcome: JJ WATT WINS AGAIN!")
              }
  
          });
