@@ -1,9 +1,13 @@
 type="text/javascript"
-var jjhp = 10;
-var jchp = 8;
-var jwhp = 7;
-var dwhp = 6
-var newjjhp = jjhp -2;
+
+var jjhp = 180;
+var jchp = 150;
+var jwhp = 120;
+var dwhp = 130;
+var clicks = 0;
+
+
+
 // on.click (links id) function to start the game that encapuslates the entire game
 $(document).ready(function(){
     $(".enemies").hide();
@@ -12,98 +16,188 @@ $(document).ready(function(){
     $(".outcome").hide();
     $(".defender").hide();
 
-    $(".jjhp").append("JJ WATT: " + jjhp);
+
+    $(".jjhp").append("JJ Watt: " + jjhp);
     $(".jchp").append("Jadeveon Clowney: " + jchp);  
     $(".jwhp").append("Jon Weeks: " + jwhp);  
     $(".dwhp").append("Deshaun Watson: " + dwhp);
 
+    //If JJ is chosen, push selectec character to Your Character div
+    $("#jj").click(function() {
+        // push remaining characters to Enemies avaliable
+        $(".enemies").show();
+        $("#jc").appendTo(".enemies");
+        $("#jw").appendTo(".enemies");
+        $("#dw").appendTo(".enemies");
 
+        // on.click function to select enemy and push to defender and hide other characters
+        $("#jc").click(function(){
+            $("#jc").appendTo(".defender");
+            $(".defender").show();
+            $("#jw").hide();
+            $("#dw").hide();
+            $("#button").show();
+        //attack button function
+            $("#button").click(function() 
+            { 
+                if (jchp > 0) {
+                clicks = clicks + 1;
+                console.log(clicks);
+                jjhp = jjhp - (10 * clicks); 
+                jchp = jchp - (10 * clicks); 
+            
+            $(".jjhp").text("JJ Watt: " + jjhp);
+            $(".jchp").text("Jadeveon Clowney:" + jchp);
+                }
+            else {
+                $(".outcome").show()
+                $(".outcome").text("JJ WATT WINS AGAIN!")
+            }
+        });
+        });
 
+        
 
+        $("#jw").click(function(){
+            $("#jw").appendTo(".defender");
+            $(".defender").show();
+            $("#button").show();
+            $("#jc").hide();
+            $("#dw").hide();
+                //attack button function
+            $("#button").click(function() 
+            { 
+                if (jwhp > 0) {
+                clicks = clicks + 1;
+                console.log(clicks);
+                jjhp = jjhp - (10 * clicks); 
+                jwhp = jwhp - (10 * clicks); 
+            
+            $(".jjhp").text("JJ Watt: " + jjhp);
+            $(".jwhp").text("Jon Weeks:" + jwhp);
+                }
+            else {
+                $(".outcome").show()
+                $(".outcome").text("JJ WATT WINS AGAIN!")
+            }
 
-//If JJ is chosen, push selectec character to Your Character div
-$("#jj").click(function() {
+        });
+        });
+        $("#dw").click(function(){
+            $("#dw").appendTo(".defender");
+            $(".defender").show();
+            $("#button").show();
+            $("#jw").hide();
+            $("#jc").hide();
+
+             //attack button function
+            $("#button").click(function() 
+            { 
+                if (dwhp > 0) {
+                clicks = clicks + 1;
+                console.log(clicks);
+                jjhp = jjhp - (10 * clicks); 
+                dwhp = dwhp - (10 * clicks); 
+            
+            $(".jjhp").text("JJ Watt: " + jjhp);
+            $(".dwhp").text("Deshaun Watson:" + dwhp);
+                }
+            else {
+                $(".outcome").show()
+                $(".outcome").text("JJ WATT WINS AGAIN!")
+            }
+
+        });
+        });
+
+    });
+
+    //If Clowney is chosen, push selectec character to Your Character div
+    $("#jc").click(function() {
+        $(".enemies").show();
+        $("#jj").appendTo(".enemies");
+        $("#jw").appendTo(".enemies");
+        $("#dw").appendTo(".enemies");
+
     // push remaining characters to Enemies avaliable
-    $(".enemies").show();
-    $("#jc").appendTo(".enemies");
-    $("#jw").appendTo(".enemies");
-    $("#dw").appendTo(".enemies");
-// on.click function to select enemy and push to defender and hide other characters
-    $("#jc").click(function(){
-        $("#jc").appendTo(".defender");
-        $(".defender").show();
-        $("#button").show();
-        $("#jw").hide();
-        $("#dw").hide();
-        $("#button").click(function(){
-            $(".jjhp").replaceWith("JJ Watt: " + newjjhp);
-            $(".jchp").replaceWith("Jadeveon Clowney:" + (jchp - 2));
+        $("#jj").click(function(){
+            $("#jj").appendTo(".defender");
+            $(".defender").show();
+            $("#button").show();
+            $("#jw").hide();
+            $("#dw").hide();
+            
+            //attack button function           
+            $("#button").click(function() 
+            { 
+                if (jchp > 0) {
+                clicks = clicks + 1;
+                console.log(clicks);
+                jjhp = jjhp - (10 * clicks); 
+                jchp = jchp - (10 * clicks); 
+            
+            $(".jjhp").text("JJ Watt: " + jjhp);
+            $(".jchp").text("Jadeveon Clowney:" + jchp);
+                }
+            else {
+                $(".outcome").show()
+                $(".outcome").text("JJ WATT WINS AGAIN!")
+            }
+        });
 
-        })
-        $("#button").click(function(){
-            if ($(".jjhp >= 0")) {
+        });
+    // on.click function to select enemy and push to defender and hide other characters
+        $("#jw").click(function(){
+            $("#jw").appendTo(".defender");
+            $(".defender").show();
+            $("#button").show();
+            $("#jj").hide();
+            $("#dw").hide();
 
-
-            $(".jjhp").replaceWith("JJ Watt: " + (newjjhp - 3));
-            $(".jchp").replaceWith("Jadeveon Clowney:" + (jchp - 2));
+            //attack button function           
+            $("#button").click(function() 
+            { 
+                if (jwhp > 0) {
+                clicks = clicks + 1;
+                console.log(clicks);
+                jwhp = jwhp - (8 * clicks); 
+                jchp = jchp - (8 * clicks); 
+            
+                 $(".jwhp").text("Jon Weeks: " + jwhp);
+                $(".jchp").text("Jadeveon Clowney:" + jchp);
             }
             else {
-                $(".outcome").append("You Win! JJ Watt wins at EVERYTHINGQ!");
-            };
+                $(".outcome").show()
+                $(".outcome").text("He's not Clowning around! Jadeveon WINS!")
+            }
         });
-        
-    });
+        });
+        $("#dw").click(function(){
+            $("#dw").appendTo(".defender");
+            $(".defender").show();
+            $("#button").show();
+            $("#jw").hide();
+            $("#jj").hide();
 
-    $("#jw").click(function(){
-        $("#jw").appendTo(".defender");
-        $(".defender").show();
-        $("#button").show();
-        $("#jc").hide();
-        $("#dw").hide();
+            //attack button function           
+            $("#button").click(function() 
+            { 
+                if (dwhp > 0) {
+                clicks = clicks + 1;
+                console.log(clicks);
+                dwhp = dwhp - (7 * clicks); 
+                jchp = jchp - (7 * clicks); 
+            
+                 $(".dwhp").text("Deshaun Watson: " + dwhp);
+                $(".jchp").text("Jadeveon Clowney:" + jchp);
+            }
+            else {
+                $(".outcome").show()
+                $(".outcome").text("He's not Clowning around! Jadeveon WINS!")
+            }
+        });
+        });
     });
-    $("#dw").click(function(){
-        $("#dw").appendTo(".defender");
-        $(".defender").show();
-        $("#button").show();
-        $("#jw").hide();
-        $("#jc").hide();
-    });
-    
-});
-//If Clowney is chosen, push selectec character to Your Character div
-$("#jc").click(function() {
-    $(".enemies").show();
-    $("#jj").appendTo(".enemies");
-    $("#jw").appendTo(".enemies");
-    $("#dw").appendTo(".enemies");
-
-   // push remaining characters to Enemies avaliable
-    $("#jj").click(function(){
-        $("#jj").appendTo(".defender");
-        $(".defender").show();
-        $("#button").show();
-        $("#jw").hide();
-        $("#dw").hide();
-    });
-// on.click function to select enemy and push to defender and hide other characters
-    $("#jw").click(function(){
-        $("#jw").appendTo(".defender");
-        $(".defender").show();
-        $("#button").show();
-        $("#jj").hide();
-        $("#dw").hide();
-    });
-    $("#dw").click(function(){
-        $("#dw").appendTo(".defender");
-        $(".defender").show();
-        $("#button").show();
-        $("#jw").hide();
-        $("#jj").hide();
-    });
-
-
-
-});
 //If Weeks is chosen, push selectec character to Your Character div
 $("#jw").click(function() {
     // push remaining characters to Enemies avaliable
@@ -119,6 +213,23 @@ $("#jw").click(function() {
         $("#button").show();
         $("#jj").hide();
         $("#dw").hide();
+            //attack button function           
+            $("#button").click(function() 
+            { 
+                if (jwhp > 0) {
+                clicks = clicks + 1;
+                console.log(clicks);
+                jwhp = jwhp - (8 * clicks); 
+                jchp = jchp - (8 * clicks); 
+            
+                 $(".jwhp").text("Jon Weeks: " + jwhp);
+                $(".jchp").text("Jadeveon Clowney:" + jchp);
+            }
+            else {
+                $(".outcome").show()
+                $(".outcome").text("He's not Clowning around! Jadeveon WINS!")
+            }
+        });
     });
 // on.click function to select enemy and push to defenderand hide other characters
     $("#jj").click(function(){
@@ -128,6 +239,24 @@ $("#jw").click(function() {
         $("#button").show();
         $("#jc").hide();
         $("#dw").hide();
+        //attack button function
+        $("#button").click(function() 
+        { 
+            if (jwhp > 0) {
+            clicks = clicks + 1;
+            console.log(clicks);
+            jjhp = jjhp - (10 * clicks); 
+            jwhp = jwhp - (10 * clicks); 
+        
+        $(".jjhp").text("JJ Watt: " + jjhp);
+        $(".jwhp").text("Jon Weeks:" + jwhp);
+            }
+        else {
+            $(".outcome").show()
+            $(".outcome").text("JJ WATT WINS AGAIN!")
+        }
+
+    });
     });
     $("#dw").click(function(){
         $("#dw").appendTo(".defender");
@@ -135,6 +264,23 @@ $("#jw").click(function() {
         $("#button").show();
         $("#jj").hide();
         $("#jc").hide();
+            //attack button function           
+            $("#button").click(function() 
+            { 
+                if (jwhp > 0) {
+                clicks = clicks + 1;
+                console.log(clicks);
+                jwhp = jwhp - (8 * clicks); 
+                dwhp = dwhp - (8 * clicks); 
+            
+                 $(".jwhp").text("Jon Weeks: " + jwhp);
+                $(".dwhp").text("Deshaun Watson:" + dwhp);
+            }
+            else {
+                $(".outcome").show()
+                $(".outcome").text("The rookie amazes us again! Watson's the WINNER!")
+            }
+        });
     });
     
 });
@@ -153,6 +299,23 @@ $("#dw").click(function() {
         $("#button").show();
         $("#jw").hide();
         $("#jj").hide();
+        //attack button function           
+        $("#button").click(function() 
+        { 
+            if (dwhp > 0) {
+            clicks = clicks + 1;
+            console.log(clicks);
+            dwhp = dwhp - (7 * clicks); 
+            jchp = jchp - (7 * clicks); 
+
+            $(".dwhp").text("Deshaun Watson: " + dwhp);
+            $(".jchp").text("Jadeveon Clowney:" + jchp);
+        }
+        else {
+            $(".outcome").show()
+            $(".outcome").text("He's not Clowning around! Jadeveon WINS!")
+        }
+        });
     });
 // on.click function to select enemy and push to defender and hide other characters
     $("#jw").click(function(){
@@ -161,6 +324,23 @@ $("#dw").click(function() {
         $("#button").show();
         $("#jc").hide();
         $("#jj").hide();
+        //attack button function           
+        $("#button").click(function() 
+        { 
+            if (jwhp > 0) {
+            clicks = clicks + 1;
+            console.log(clicks);
+            jwhp = jwhp - (8 * clicks); 
+            dwhp = dwhp - (8 * clicks); 
+        
+                $(".jwhp").text("Jon Weeks: " + jwhp);
+            $(".dwhp").text("Deshaun Watson:" + dwhp);
+        }
+        else {
+            $(".outcome").show()
+            $(".outcome").text("The rookie amazes us again! Watson's the WINNER!")
+        }
+    });
     });
     $("#jj").click(function(){
         $("#jj").appendTo(".defender");
@@ -168,11 +348,31 @@ $("#dw").click(function() {
         $("#button").show();
         $("#jw").hide();
         $("#jc").hide();
+             //attack button function
+             $("#button").click(function() 
+             { 
+                 if (dwhp > 0) {
+                 clicks = clicks + 1;
+                 console.log(clicks);
+                 jjhp = jjhp - (10 * clicks); 
+                 dwhp = dwhp - (10 * clicks); 
+             
+             $(".jjhp").text("JJ Watt: " + jjhp);
+             $(".dwhp").text("Deshaun Watson:" + dwhp);
+                 }
+             else {
+                 $(".outcome").show()
+                 $(".outcome").text("JJ WATT WINS AGAIN!")
+             }
+ 
+         });
     });
-    
-});
+
+});    
 
 });
+
+
 
  
 
